@@ -60,12 +60,6 @@
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -75,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Example\ExampleBehaviour.cs" />
+    <Compile Include="Assets\Example\NguiTest\NguiTest.cs" />
     <Compile Include="Assets\KeraLua\CharPtr.cs" />
     <Compile Include="Assets\KeraLua\DynamicLibraryPath.cs" />
     <Compile Include="Assets\KeraLua\Lua.cs" />
