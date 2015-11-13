@@ -94,7 +94,9 @@ end
         try {
 			//result = env.DoString(source);
 			env.DoString(source);
+#if UNITY_IPHONE
             LuaBinder.RegisterNLuaDelegate(env);
+#endif
         } catch(NLua.Exceptions.LuaException e) {
 			Debug.LogError(FormatException(e), gameObject);
 		}
