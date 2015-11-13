@@ -260,7 +260,7 @@ namespace NLua
 		 * if the assembly is not found.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int LoadAssembly (LuaState luaState)
@@ -344,7 +344,7 @@ namespace NLua
 		 * type is not found.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int ImportType (LuaState luaState)
@@ -372,7 +372,7 @@ namespace NLua
 		 * type passed as second argument in the stack.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int RegisterTable (LuaState luaState)
@@ -418,13 +418,13 @@ namespace NLua
 
 			return 0;
 		}
-
+          
 		/*
 		 * Implementation of free_object. Clears the metatable and the
 		 * base field, freeing the created object for garbage-collection
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int UnregisterTable (LuaState luaState)
@@ -469,7 +469,7 @@ namespace NLua
 		 * if no matching method is not found.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int GetMethodSignature (LuaState luaState)
@@ -522,7 +522,7 @@ namespace NLua
 		 * if no matching constructor is found.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int GetConstructorSignature (LuaState luaState)
@@ -972,7 +972,7 @@ namespace NLua
 		}
 
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int CType (LuaState luaState)
@@ -990,9 +990,9 @@ namespace NLua
 			PushObject (luaState, t, "luaNet_metatable");
 			return 1;
 		}
-
+                 
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int EnumFromInt (LuaState luaState)

@@ -124,7 +124,7 @@ namespace NLua
 		 * __call metafunction of CLR delegates, retrieves and calls the delegate.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int RunFunctionDelegate (LuaState luaState)
@@ -144,7 +144,7 @@ namespace NLua
 		 * __gc metafunction of CLR objects.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int CollectObject (LuaState luaState)
@@ -167,7 +167,7 @@ namespace NLua
 		 * __tostring metafunction of CLR objects.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int ToStringLua (LuaState luaState)
@@ -193,7 +193,7 @@ namespace NLua
  * __add metafunction of CLR objects.
  */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int AddLua (LuaState luaState)
@@ -206,7 +206,7 @@ namespace NLua
 		* __sub metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int SubtractLua (LuaState luaState)
@@ -219,7 +219,7 @@ namespace NLua
 		* __mul metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int MultiplyLua (LuaState luaState)
@@ -232,7 +232,7 @@ namespace NLua
 		* __div metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int DivideLua (LuaState luaState)
@@ -245,7 +245,7 @@ namespace NLua
 		* __mod metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int ModLua (LuaState luaState)
@@ -258,7 +258,7 @@ namespace NLua
 		* __unm metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int UnaryNegationLua (LuaState luaState)
@@ -294,7 +294,7 @@ namespace NLua
 		* __eq metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int EqualLua (LuaState luaState)
@@ -307,7 +307,7 @@ namespace NLua
 		* __lt metafunction of CLR objects.
 		*/
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int LessThanLua (LuaState luaState)
@@ -320,7 +320,7 @@ namespace NLua
 		 * __le metafunction of CLR objects.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int LessThanOrEqualLua (LuaState luaState)
@@ -374,7 +374,7 @@ namespace NLua
 		 * If the member does not exist returns nil.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int GetMethod (LuaState luaState)
@@ -479,7 +479,7 @@ namespace NLua
 		 * Adds a prefix to the method name to call the base version of the method.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int GetBaseMethod (LuaState luaState)
@@ -728,7 +728,7 @@ namespace NLua
 		 * and error if the assignment is invalid.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int SetFieldOrProperty (LuaState luaState)
@@ -903,7 +903,7 @@ namespace NLua
 		 * __index metafunction of type references, works on static members.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int GetClassMethod (LuaState luaState)
@@ -945,7 +945,7 @@ namespace NLua
 		 * __newindex function of type references, works on static members.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int SetClassFieldOrProperty (LuaState luaState)
@@ -976,7 +976,7 @@ namespace NLua
 		 * generates an exception.
 		 */
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		private static int CallConstructor (LuaState luaState)

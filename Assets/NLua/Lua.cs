@@ -333,7 +333,7 @@ end
 		}
 
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaNativeFunction))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaNativeFunction))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 		static int PanicCallback (LuaState luaState)
@@ -965,7 +965,7 @@ end
 		/// <param name = "luaDebug">Pointer to LuaDebug (lua_debug) structure</param>
 		/// 
 #if MONOTOUCH
-		[MonoTouch.MonoPInvokeCallback (typeof (LuaHook))]
+		[AOT.MonoPInvokeCallbackAttribute (typeof (LuaHook))]
 #endif
 		[System.Runtime.InteropServices.AllowReversePInvokeCalls]
 #if USE_KOPILUA

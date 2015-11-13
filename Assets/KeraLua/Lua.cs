@@ -45,7 +45,7 @@ namespace KeraLua
 
 		public static int LuaLLoadString (IntPtr luaState, string chunk)
 		{
-			return NativeMethods.LuaLLoadString (luaState, chunk);
+            return NativeMethods.LuaLLoadStringS(luaState, chunk);
 		}
 
 		public static int LuaLLoadString (IntPtr luaState, byte [] chunk)
@@ -291,9 +291,9 @@ namespace KeraLua
 #if !UNITY_3D
 		[CLSCompliantAttribute(false)]
 #endif
-		public static int LuaNetLoadBuffer (IntPtr luaState, string buff, uint size, string name)
+		public static int LuaNetLoadBufferS (IntPtr luaState, string buff, uint size, string name)
 		{
-			return NativeMethods.LuaNetLoadBuffer (luaState, buff, size, name);
+			return NativeMethods.LuaNetLoadBufferS (luaState, buff, size, name);
 
 		}
 

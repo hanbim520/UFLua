@@ -161,7 +161,7 @@ namespace KopiLua
 #if !UNITY_3D
 		[CLSCompliantAttribute(false)]
 #endif
-		public static int LuaNetLoadBuffer (LuaState L, string buff, uint sz, string name)
+		public static int LuaNetLoadBufferS (LuaState L, string buff, uint sz, string name)
 		{
 			if (sz == 0)
 				sz = (uint) strlen (buff);
