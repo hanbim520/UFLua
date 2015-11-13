@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Example\ExampleBehaviour.cs" />
+     <Compile Include="Assets\Example\NguiTest\NguiTest.cs" />
      <Compile Include="Assets\KeraLua\CharPtr.cs" />
      <Compile Include="Assets\KeraLua\DynamicLibraryPath.cs" />
      <Compile Include="Assets\KeraLua\Lua.cs" />
