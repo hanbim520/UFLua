@@ -1,0 +1,44 @@
+/*
+wine整理，Q710605420 UFLua 意为免费使用的unityLua，插件部分需要付费的，请自行付费，如有版权问题，整理者概不负责！Q群:479355429
+
+插件如若商用，请务必官网购买！
+
+daily assets update for try.
+
+U should buy the asset from home store if u use it in your project!
+*/
+
+//----------------------------------------------
+//            NGUI: Next-Gen UI kit
+// Copyright © 2011-2015 Tasharen Entertainment
+//----------------------------------------------
+
+using UnityEngine;
+
+/// <summary>
+/// Attaching this script to an element of a scroll view will make it possible to center on it by clicking on it.
+/// </summary>
+
+[AddComponentMenu("NGUI/Interaction/Center Scroll View on Click")]
+public class UICenterOnClick : MonoBehaviour
+{
+	void OnClick ()
+	{
+		UICenterOnChild center = NGUITools.FindInParents<UICenterOnChild>(gameObject);
+		UIPanel panel = NGUITools.FindInParents<UIPanel>(gameObject);
+
+		if (center != null)
+		{
+			if (center.enabled)
+				center.CenterOn(transform);
+		}
+		else if (panel != null && panel.clipping != UIDrawCall.Clipping.None)
+		{
+			UIScrollView sv = panel.GetComponent<UIScrollView>();
+			Vector3 offset = -panel.cachedTransform.InverseTransformPoint(transform.position);
+			if (!sv.canMoveHorizontally) offset.x = panel.cachedTransform.localPosition.x;
+			if (!sv.canMoveVertically) offset.y = panel.cachedTransform.localPosition.y;
+			SpringPanel.Begin(panel.cachedGameObject, offset, 6f);
+		}
+	}
+}
