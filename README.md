@@ -27,3 +27,7 @@ been tested for compatibility.
 
 注：
 	目前如果使用USE_KERALUA的童鞋 在IOS上有可能不通过。本项目用于研究，在不侵害第三方权益的条件下，可以商业使用，否则因侵害而造成的任何法律责任将由侵害人自己承担。UGUI童鞋可直接删除NGUI！使用NGUI的童鞋请删除后自行购买！
+	
+	
+日志：
+2015.11.15修复keralua加载lua文件bug
