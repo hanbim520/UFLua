@@ -1,6 +1,5 @@
 import 'System'
 import 'UnityEngine'
-import 'UnityEngine.UI'
 import 'PluginsUI'
 import 'DG.Tweening'
 import 'ITween'
@@ -11,7 +10,6 @@ local Speed = 5;
 
 local showEnv = false
 local envScroll = Vector2.zero
-local ButtonObj = nil
 
 function Awake()   
     --transform:FindChild('Text'):GetComponent('Text').text =  'set text from lua script'
@@ -20,13 +18,15 @@ function Awake()
 end
 
 function Start()
-   -- GameObject.Find('Canvas/Text'):GetComponent('Text').text = 'ffdfdasfds';     
-     --GameObject.Find('Canvas/Text'):GetComponent('Text').text = 'set text from lua script'
+   --  GameObject.Find("Canvas/Text"):GetComponent("Text").text = "ffdfdasfds";     
+   --  GameObject.Find('Canvas/Text'):GetComponent('Text').text = 'set text from lua script'
    --  Debug.Log(GameObject.Find('Canvas/Button'):GetComponent('Button').onClick)
     -- GameObject.Find('Canvas/Button'):GetComponent('Button').onClick:AddListener(function()
     --    GameObject.Find('Canvas/Text'):GetComponent('Text').text = 'Hello'
-   -- end)
+   -- end)           
+  
 
+     GameObject.Instantiate(cube)
      Debug.Log("name====>"..btnObj.gameObject.name)
      EventTriggerListener.Get(btnObj.gameObject).onDown = clicked;
      iTween.MoveTo(btnObj.gameObject, Vector3(100, 100, 0), 4);
@@ -37,7 +37,7 @@ function clicked()
 end
 
 function rotation()
-    transform:RotateAround(transform.position,Angle,Speed * Time.deltaTime)    
+    cube.transform:RotateAround(transform.position,Angle,Speed * Time.deltaTime)    
 --	if Input.GetKey(KeyCode.W) then
 --		Speed = Speed + 1
 --	end
@@ -54,7 +54,8 @@ end
 
 function Update()
 	rotation()
-
+    local b = Sphere.transform.forward;
+    Sphere:GetComponent('Rigidbody'):AddForce(Vector3(b.x,b.y * (-10),b.z));
 end
 
 function OnGUI()
