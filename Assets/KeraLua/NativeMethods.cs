@@ -50,7 +50,7 @@ namespace KeraLua
 		internal static extern void LuaLOpenLibs (IntPtr luaState);
 
 		[DllImport (LIBNAME, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi, EntryPoint = "luaL_loadstring")]
-		internal static extern int LuaLLoadStringS (IntPtr luaState, string chunk);
+		internal static extern int LuaLLoadString (IntPtr luaState, string chunk);
 
 		[DllImport (LIBNAME, CallingConvention = CallingConvention.Cdecl, EntryPoint = "luaL_loadstring")]
 		internal static extern int LuaLLoadString (IntPtr luaState, byte [] chunk);
@@ -185,7 +185,7 @@ namespace KeraLua
 		internal static extern int LuaLGetMetafield (IntPtr luaState, int stackPos, string field);
 
 		[DllImport (LIBNAME, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi, EntryPoint = "luanet_loadbuffer")]
-		internal static extern int LuaNetLoadBufferS (IntPtr luaState, string buff, uint size, string name);
+		internal static extern int LuaNetLoadBuffer (IntPtr luaState, string buff, uint size, string name);
 
 		[DllImport (LIBNAME, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi, EntryPoint = "luanet_loadbuffer")]
 		internal static extern int LuaNetLoadBuffer (IntPtr luaState, byte [] buff, uint size, string name);

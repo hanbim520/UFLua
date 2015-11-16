@@ -54,8 +54,9 @@ end
 
 function Update()
 	rotation()
-    local b = Sphere.transform.forward;
-    Sphere:GetComponent('Rigidbody'):AddForce(Vector3(b.x,b.y * (-10),b.z));
+	--kopilua 可以打开，keralua目前会报错
+--    local b = Sphere.transform.forward;
+--    Sphere:GetComponent('Rigidbody'):AddForce(Vector3(b.x,b.y * (-10),b.z));
 end
 
 function OnGUI()
