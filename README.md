@@ -31,4 +31,11 @@ been tested for compatibility.
 	
 日志：
 2015.11.15修复keralua加载lua文件bug
+
+
+
 2015.11.17 更新keralua lua各个版本编译https://github.com/NLua/lua.git
+
+
+2015.12.03 增加图文混合 UIRichText控件（未做优化）
+

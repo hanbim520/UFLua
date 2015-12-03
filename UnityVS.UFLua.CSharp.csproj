@@ -60,12 +60,6 @@
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -301,6 +295,7 @@
     <Compile Include="Assets\NLua\Method\RegisterEventHandler.cs" />
     <Compile Include="Assets\NLua\ObjectTranslator.cs" />
     <Compile Include="Assets\NLua\ObjectTranslatorPool.cs" />
+    <Compile Include="Assets\NLua\Plugins\Base64.cs" />
     <Compile Include="Assets\NLua\Plugins\Callback.cs" />
     <Compile Include="Assets\NLua\Plugins\EventTriggerListener.cs" />
     <Compile Include="Assets\NLua\Plugins\LuaBinder.cs" />
